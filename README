@@ -1,0 +1,27 @@
+PETRUSCA BOGDAN-MIHAI
+313 CB
+Baza mea de carduri are la baza 3 structuri corespunzatoare liste de istoric (LHistory), 
+listei de carduri (LSC), si listei de liste de carduri (LC).
+
+Celula de istoric contine ca si informatie un string in care este retinut mesajul ce trebuie adaugat in istoric.
+
+In functia add_card ideea mea a fost sa adaug mai intai numarul de celule
+de LC necesare, iar dupa aceea sa adaug cardul in lista de carduri din celula 
+dorita folosind o functie (InsInc) care adauga la inceputul unei liste de LSC cardul.
+
+Pentru a sterge cardul ma folosesc de 2 functii "eliminare" si "delete_card".
+Prima functie parcurge un LSC si cauta cardul, iar dupa aceea il elimina.
+A doua functie o apeleaza pe prima pentru fiecare celula de LC (in care se afla lista de LSC). 
+
+Functiile aux_add_card si aux_InsInc merg pe aceeasi ideea ca cele de sus.
+Diferenta o face faptul ca acestea adauga toate informatiile despre card, 
+pe cand cele de sus doar acele informatii date ca parametru pentru add_card.
+
+Functiile pentru utilizator cauta cardul in lista de data si ii modifica diverse 
+valori, iar apoi operatiile sunt adaugate in istoric
+
+Functia de redimensionare muta toate cardurile din baza de date intr-o alta lista, 
+iar apoi cu ajutorul functiilor "aux_add_card" si "aux_InsInc" sunt mutate inapoi in baza de date pe noile pozitii.
+
+Pentru a face citirea din fisier, sa salvat liniie intr-un vector de  charuri "s". 
+Dupa aceea am parcurs fiecare linie si am extras parametrii doriti cu ajutorul lui strtok.
